@@ -1,0 +1,107 @@
+.drag_block ul {
+    height: 19px;
+    display: inline-table;
+    float: left;
+    line-height: 19px;
+    list-style: none;
+    margin: 0px 0px;
+    padding: 3px;
+    width: 100%;
+}
+.drag_block ul li {
+    float: left;
+    line-height: 17px;
+    list-style-type: none;
+    height: 19px;
+    display: inline;
+    padding: 1px 8px 1px 0px;
+    min-width: 70px;
+    text-align: center;
+    white-space:nowrap;
+    box-shadow: 0 0 2px #DDD;
+    border-radius: 3px;
+    -moz-box-shadow: 0 0 2px #DDD;
+    -moz-border-radius: 3px;
+    -webkit-box-shadow: 0 0 2px #DDD;
+    -webkit-border-radius: 3px;
+    margin: 2px 3px;
+}
+.drag_block ul li a {
+    padding: 8px 0px 8px 10px;
+}
+
+.d_dimension {
+    background: #e5f6ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e0e9ef), to(#c2d5e2));
+    background: -moz-linear-gradient(top, #e0e9ef 0%, #c2d5e2 100%);
+    border: 1px solid #2a6085;
+    color: #2a6085;
+    display: inline !important;
+    box-shadow: 0 0 2px #DDD;
+}
+.d_dimension:hover {
+    background: #C2DAEF;
+}
+.d_dimension span.selections {
+    background-position: -981px 2px;
+    height: 16px;
+    width: 16px;
+    float: right;
+    cursor: pointer;
+    margin-top: 2px;
+}
+.d_dimension a {
+    color: #2a6085;
+    text-decoration: none;
+}
+
+.d_dimension .cancel {
+	height: 16px;
+        width: 16px;
+        padding: 2px 3px;
+        float: right;
+        cursor: pointer;
+}
+.d_dimension .cancel:hover {
+	background : url("../images/cancel3.png") no-repeat center transparent;
+}
+
+.d_measure {
+    background: #ffe8e8;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fcf5f5), to(#fad9d9));
+    background: -moz-linear-gradient(top, #fcf5f5 0%, #fad9d9 100%);
+    border: 1px solid #ed9393;
+    color: #983030;
+    display: inline !important;
+}
+.d_measure:hover {
+    background: #fad9d9;
+}
+.d_measure a {
+    color: #983030;
+    text-decoration: none;
+}
+
+.d_measure .cancel {
+	height: 16px;
+        width: 16px;
+        padding: 2px 3px;
+        float: right;
+        cursor: pointer;
+}
+.d_measure .cancel:hover {
+	background : url("../images/cancel3.png") no-repeat center transparent;
+}
+
+
+.d_placeholder  {
+    border: 1px dashed #999;
+    color: #999;
+    display: inline !important;
+    box-shadow: 0 0 2px #DDD;
+}
+.d_placeholder  a{
+    color: gray;
+    text-decoration: none;
+}
+.filetree li { line-height:16px;}

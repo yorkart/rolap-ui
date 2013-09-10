@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+  
+    定制和下载Bootstrap &middot; Bootstrap
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+<link href="Scripts/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="Scripts/layoutit.css" rel="stylesheet">
+
+
+	<!-- <link rel="stylesheet" href="css/screen.css" /> -->
+	<link rel="stylesheet" href="css/drag_block.css" />
+	
+	<link rel="stylesheet" href="js/jquery/jquery.treeview/jquery.treeview.css" />
+	
+    <!-- Place anything custom after this. -->
+	<style type="text/css" >
+		.tree ul {margin: 0; padding: 0; clear:both;}
+		.tree a img { border: none; }
+		.tree ul li { height:16px;line-height ; 0px;} 
+	</style>
+  </head>
+  <body
+  
+<!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">首页</a>
+              </li>
+              <li class="">
+                <a href="./getting-started.html">起步</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">脚手架</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">基本CSS样式</a>
+              </li>
+              <li class="">
+                <a href="./components.html">组件</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">JavaScript插件</a>
+              </li>
+              <li class="active">
+                <a href="./customize.html">定制</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+<div class="container-fluid">
+	<div class="">
+      <div class="sidebar-nav">
+        
+        <ul class="nav nav-list accordion-group">
+          <li class="nav-header"><i class="icon-plus icon-white"></i> 维度 </li>
+        </ul>
+		
+		<ul id="tree_dimension" class="filetree tree">
+			<li><span class="folder">Dimension01</span>
+				<ul>
+					<li><span class="file dimension" id="1">Dimension Year</span></li>
+					<li><span class="file dimension" id="2">Dimension Quarter</span></li>
+					<li><span class="file dimension" id="3">Dimension Month</span></li>
+					<li><span class="file dimension" id="4">Dimension Day</span></li>
+				</ul>
+			</li>
+			<li class="closed"><span class="folder">Dimension02</span>
+				<ul>
+					<li><span class="file dimension" id="5">Dimension 3.1</span></li>
+					<li><span class="file dimension" id="6">Dimension 3.2</span></li>
+					<li><span class="file dimension" id="7">Dimension 3.3</span></li>
+					<li><span class="file dimension" id="8">Dimension 3.4</span></li>
+				</ul>
+			</li>
+		</ul>
+		
+        <ul class="nav nav-list accordion-group">
+          <li class="nav-header"><i class="icon-plus icon-white"></i> 度量 </li>
+        </ul>
+		
+		<ul id="tree_measure" class="filetree tree">
+			<li><span class="folder">Measure01</span>
+				<ul>
+					<li><span class="file measure" id="11">Measure 1.1</span></li>
+					<li><span class="file measure" id="12">Measure 1.2</span></li>
+					<li><span class="file measure" id="13">Measure 1.3</span></li>
+				</ul>
+			</li>
+			<li class="closed"><span class="folder">Measure02</span>
+				<ul>
+					<li><span class="file measure" id="14">Measure 3.1</span></li>
+					<li><span class="file measure" id="15">Measure 3.2</span></li>
+					<li><span class="file measure" id="16">Measure 3.3</span></li>
+					<li><span class="file measure" id="17">Measure 3.4</span></li>
+				</ul>
+			</li>
+		</ul>
+		
+      </div>
+    </div>
+	
+	<div class="row-fluid">
+		<div class="span12">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">资料</a>
+				</li>
+				<li class="disabled">
+					<a href="#">信息</a>
+				</li>
+				<li class="dropdown pull-right">
+					 <a href="#" data-toggle="dropdown" class="dropdown-toggle">下拉<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="#">操作</a>
+						</li>
+						<li>
+							<a href="#">设置栏目</a>
+						</li>
+						<li>
+							<a href="#">更多设置</a>
+						</li>
+						<li class="divider">
+						</li>
+						<li>
+							<a href="#">分割线</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<div class="row-fluid">
+			  <div class="span2 " style="background-color:#ccc"></div>
+				<div class="span10  ">
+					<div id="target_dimension" class="drag_block" style="border:1px solid #ccc;width:100%;height:35px;padding-left:20px;-moz-box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+            box-sizing:border-box">
+						<ul ></ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="input-prepend">
+				<div class="btn-group">
+					<button class="btn dropdown-toggle" data-toggle="dropdown">
+						Action
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						...
+					</ul>
+				</div>
+				<input class="span12" id="prependedDropdownButton" type="text">
+			</div>
+			
+		</div>
+		
+	</div>
+</div>
+
+
+
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="Scripts/jquery/jquery-1.10.2.min.js"></script>
+<script src="Scripts/bootstrap/js/bootstrap.js"></script>
+
+
+	<script type="text/javascript" src="js/jquery/jquery.easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.treeview/jquery.treeview.js" ></script>
+	
+	
+	<!-- Templates -->
+    <script type="text/html" id="template-block">
+		<div class="drag_block">
+			<ul class="connectable ui-sortable">
+				<li id="li_${id}" class="ui-draggable d_${type}" >
+					<span class="cancel" onclick="drag_block.cancel('li_${id}')"></span>
+					<a title="Region" rel="[Country].[Region]" class="level" href="#">${name}</a>
+				</li>
+			</ul>
+		</div>
+    </script>
+	
+	<script type="text/javascript" src="js/drag_block.js" ></script>
+	
+	<script>
+        $(function(){
+			// first example
+			$("#tree_dimension").treeview();
+			//$("#tree_measure").treeview();
+			drag_block.init_drag('dimension');
+			//drag_block.init_drag('measure');
+        });
+    </script>
+	
+  </body>
+</html>
