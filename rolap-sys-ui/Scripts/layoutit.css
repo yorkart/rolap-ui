@@ -27,7 +27,8 @@ body {
 	bottom:0;
 	top:44px;
 	/*background:#ccc;*/
-	padding: 9px 0; z-index:10;
+	padding: 9px 0; 
+	/*z-index:10;*/
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
