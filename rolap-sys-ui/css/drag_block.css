@@ -25,7 +25,8 @@
     -moz-border-radius: 3px;
     -webkit-box-shadow: 0 0 2px #DDD;
     -webkit-border-radius: 3px;
-    margin: 2px 3px;
+    /*margin: 2px 3px;*/
+	margin-left:3px;
 }
 .drag_block ul li a {
     padding: 8px 0px 8px 10px;
@@ -122,6 +123,6 @@
 .d_table .d_t_field {width:88px; height:100%; padding-top:6px; padding-left:10px; 
 					border-top-left-radius:5px;border-bottom-left-radius:5px;border:1px solid #ccc;
 					background:-webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#E6E6E6));}
-.d_table .d_t_block {border:1px solid #ccc;width:100%;min-height:39px; 
+.d_table .d_t_block {border:1px solid #ccc;width:100%;min-height:36px; 
 					border-bottom-right-radius:5px;border-top-right-radius:5px;border:1px solid #ccc;
 					padding-top:4px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; box-sizing:border-box}
