@@ -27,9 +27,9 @@ body {
 	width:250px;
 	left:0px;
 	bottom:0;
-	top:44px;
+	top:41px;
 	/*background:#ccc;*/
-	padding: 9px 0; 
+	/*padding: 9px 0; */
 	/*z-index:10;*/
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
@@ -51,4 +51,4 @@ body {
 	font-weight :bold;
 	text-shadow:1px 1px 0 #FFFFFF;
 }
-
+.sidebar-nav select { width:100%;heght:30px;padding:2px;}
