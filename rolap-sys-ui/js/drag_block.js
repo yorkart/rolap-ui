@@ -1,7 +1,17 @@
 
 	
 var drag_block = {};
-(function(){ 
+(function(){
+	var dimension = 'dimension';
+	var measure = 'measure';
+	var filter = 'filter';
+	
+	var filter_event = null;
+	
+	function getValue($ele){
+		//$ele
+	}
+	
 	// 拖拽块模版
 	var drag_tmp;
 	function get_drag_tmp(){
@@ -73,8 +83,8 @@ var drag_block = {};
         });
 	};
 	
-	drag_block.init_drag = function(drag_type){
-	
+	function init_drag(drag_type){
+		
         //$('[dimension]').draggable({
 		//source_node.draggable({
 		$('.' + drag_type).draggable({
@@ -89,9 +99,11 @@ var drag_block = {};
             revert:true,
             cursor:'move',
             onStartDrag:function(){
+				console.log('onStartDrag');
                 $(this).draggable('options').cursor='not-allowed';
             },
             onStopDrag:function(){
+				console.log('onStopDrag');
                 $(this).draggable('options').cursor='move';
             }
         });
@@ -101,12 +113,15 @@ var drag_block = {};
             //accept:'#d1,#d3',
             accept: '.' + drag_type, // eg: '.dimension'
             onDragEnter:function(e,source){
+				console.log('onDragEnter');
                 $(source).draggable('options').cursor='move';
             },
             onDragLeave:function(e,source){
+				console.log('onDragLeave');
                 $(source).draggable('options').cursor='not-allowed';
             },
             onDrop:function(e,source){
+				console.log('onDrop');
 				if(pos_change){ // 因为本事件处理tree的拖拽，如果当前是内部位置排序拖拽，则跳过 
 					return; 
 				}
@@ -134,10 +149,39 @@ var drag_block = {};
             }
         });
 	}
-	
-	drag_block.cancel = function(li_id){
-				console.log('cancel');
-		$('#' + li_id).remove();
+	function init_filter(){
+		$('#target_filter').droppable({
+			//accept:'#d1,#d3',
+			accept: '.dimension,.measure', // eg: '.dimension'
+			onDragEnter:function(e,source){
+				console.log('onDragEnter');
+				$(source).draggable('options').cursor='move';
+			},
+			onDragLeave:function(e,source){
+				console.log('onDragLeave');
+				$(source).draggable('options').cursor='not-allowed';
+			},
+			onDrop:function(e,source){
+				console.log('onDrop  I want to showing a box');
+				if(filter_event){
+					filter_event(e,source);
+				}
+			}
+		});
+	}
+	drag_block.init = function(){
+		init_drag(dimension);
+		init_drag(measure);
+		init_filter();
 	}
 	
+	drag_block.getDimensionValue = function(){
+	
+	}
+	drag_block.getDimensionValue = function(){
+	
+	}
+	drag_block.setFilterEvent = function(e){
+		filter_event = e;
+	}
 })();

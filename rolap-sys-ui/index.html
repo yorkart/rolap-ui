@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" ng-app>
   <head>
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -12,21 +12,22 @@
 	<!-- Bootstrap core CSS -->
 	<link href="Scripts/bootstrap/css/bootstrap.css" rel="stylesheet">
 	<link href="Scripts/layoutit.css" rel="stylesheet">
-
-
-	<!-- <link rel="stylesheet" href="css/screen.css" /> -->
 	
-	<link rel="stylesheet" href="js/jquery/jquery.treeview/jquery.treeview.css" />
+	<link rel="stylesheet" href="Scripts/jquery/jquery.treeview/jquery.treeview.css" />
 	<link rel="stylesheet" href="css/drag_block.css" />
 	
     <!-- Place anything custom after this. -->
 	<style type="text/css" ></style>
+	
+	
+	
+	
   </head>
   <body
   
 <!-- Navbar
     ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
 				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -34,7 +35,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="brand" href="./index.html">Bootstrap</a>
+				<a class="brand" href="./index.html">Rolap</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<li class="">
@@ -69,8 +70,8 @@
 		<div class="sidebar-nav">
         
 			<h3>产品</h3>
-			<div style="margin:10px;">
-			<select ></select>
+			<div style="margin:10px;" ng-controller="ProductCtrl">
+				<select ng-model="product" ng-options="p.name for p in products" ng-change="change()"></select>
 			</div>
 			
 			<h3>维度</h3>
@@ -192,19 +193,39 @@
 	</div>
 </div>
 
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Modal header</h3>
+	</div>
+	<div class="modal-body">
+		<p>One fine body…</p>
+	</div>
+	<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+		<button class="btn btn-primary">Save changes</button>
+	</div>
+</div>
 
-
-    <!-- Bootstrap core JavaScript
+<!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="Scripts/jquery/jquery-1.10.2.min.js"></script>
-<script src="Scripts/bootstrap/js/bootstrap.js"></script>
-
-
-	<script type="text/javascript" src="js/jquery/jquery.easyui/jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="js/jquery/jquery.treeview/jquery.treeview.js" ></script>
+	<script src="Scripts/jquery/jquery-1.10.2.min.js"></script>
+	<script src="Scripts/bootstrap/js/bootstrap.js"></script>
 	
+	<script type="text/javascript" src="Scripts/jquery/jquery.easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="Scripts/jquery/jquery.treeview/jquery.treeview.js" ></script>
 	
+	<script type="text/javascript" src="Scripts/angular-1.0.8/angular.min.js" ></script>
+	<script type="text/javascript" src="js/controls/Product.js" ></script>
+	
+	<!--
+	<script type="text/javascript" src="Scripts/starter-kit-1.0.0/js/libs/ember-1.0.0.js" ></script>
+	<script type="text/javascript" src="Scripts/starter-kit-1.0.0/js/libs/handlebars-1.0.0.js" ></script>
+	
+	<script src="js/app.js"></script>
+	-->
 	<!-- Templates -->
     <script type="text/html" id="template-block">
 		<div class="drag_block">
@@ -224,8 +245,15 @@
 			// first example
 			$("#tree_dimension").treeview();
 			$("#tree_measure").treeview();
-			drag_block.init_drag('dimension');
-			drag_block.init_drag('measure');
+			//drag_block.init_drag('dimension');
+			//drag_block.init_drag('measure');
+			
+			drag_block.init();
+			drag_block.setFilterEvent(function(e,source){
+				console.log('setFilterEvent');
+				$('#myModalLabel').text( $(source).text());
+				$('#myModal').modal('toggle')
+			});
         });
     </script>
 	

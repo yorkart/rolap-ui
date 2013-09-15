@@ -117,10 +117,10 @@
 
 /* drag table */
 .d_table {width:100%;}
-.d_table tr td { padding:0;padding-bottom:10px;}
+.d_table tr td { padding:0;padding-bottom:8px;}
 .d_table .d_t_left { width:100px;height:35px;}
 .d_table .d_t_right { width:100px;height:35px;}
-.d_table .d_t_field {width:88px; height:100%; padding-top:6px; padding-left:10px; 
+.d_table .d_t_field {width:88px; height:100%; padding-top:6px; padding-left:10px; font-weight:bold;
 					border-top-left-radius:5px;border-bottom-left-radius:5px;border:1px solid #ccc;
 					background:-webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#E6E6E6));}
 .d_table .d_t_block {border:1px solid #ccc;width:100%;min-height:36px; 

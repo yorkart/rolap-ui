@@ -1,0 +1,8 @@
+﻿[
+	{"nodeid":10,"nodename":"酒店信息"},
+	{"nodeid":20,"nodename":"国内机票信息"},
+	{"nodeid":30,"nodename":"景区信息"},
+	{"nodeid":40,"nodename":"公共维度"},
+	{"nodeid":60,"nodename":"度假信息"},
+	{"nodeid":90,"nodename":"会员信息"}
+]
