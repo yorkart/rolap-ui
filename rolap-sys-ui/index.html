@@ -17,11 +17,10 @@
 	<link rel="stylesheet" href="css/drag_block.css" />
 	
     <!-- Place anything custom after this. -->
-	<style type="text/css" ></style>
-	
-	
-	
-	
+	<style type="text/css" >
+		#dimensionModal {width: 900px;margin: 0 0 0 -450px;}
+	</style>
+
   </head>
   <body
   
@@ -66,12 +65,14 @@
     </div>
 	
 <div class="container-fluid">
+
 	<div class="">
-		<div class="sidebar-nav">
-        
+		<div class="sidebar-nav" >
+			<!-- <div ng-include src="'partials/left_sidebar.html'"></div>-->
+			       
 			<h3>产品</h3>
 			<div style="margin:10px;" ng-controller="ProductCtrl">
-				<select ng-model="product" ng-options="p.name for p in products" ng-change="change()"></select>
+				<select ng-model="product" ng-options="p.nodename for p in products" ng-change="change()"></select>
 			</div>
 			
 			<h3>维度</h3>
@@ -94,7 +95,6 @@
 				</li>
 			</ul>
 			
-			
 			<h3>度量</h3>
 			<ul id="tree_measure" class="filetree tree_4_bst">
 				<li><span class="folder">Measure01</span>
@@ -113,7 +113,7 @@
 					</ul>
 				</li>
 			</ul>
-		
+				
 		</div>
     </div>
 	
@@ -193,7 +193,9 @@
 	</div>
 </div>
 
-<!-- Modal -->
+<div ng-include src="'partials/dimension_filter_modal.html'"></div>
+
+<!-- Modal 
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -207,7 +209,7 @@
 		<button class="btn btn-primary">Save changes</button>
 	</div>
 </div>
-
+-->
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -231,7 +233,7 @@
 		<div class="drag_block">
 			<ul class="connectable ui-sortable">
 				<li id="li_${id}" class="ui-draggable d_${type}" >
-					<span class="cancel" onclick="drag_block.cancel('li_${id}')"></span>
+					<!--<span class="cancel" onclick="drag_block.cancel('li_${id}')"></span>-->
 					<a title="Region" rel="[Country].[Region]" class="level" href="#">${name}</a>
 				</li>
 			</ul>
@@ -252,7 +254,9 @@
 			drag_block.setFilterEvent(function(e,source){
 				console.log('setFilterEvent');
 				$('#myModalLabel').text( $(source).text());
-				$('#myModal').modal('toggle')
+				//$('#myModal').modal('toggle');
+				$('#dimensionModal').modal('toggle');
+				
 			});
         });
     </script>
