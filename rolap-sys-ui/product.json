@@ -1,0 +1,780 @@
+[
+   [
+      {
+         "ProductId": 1,
+         "DimFK": 1,
+         "Id": 110,
+         "Name": "维度",
+         "Type": 0,
+         "Child": [
+            {
+               "ProductId": 1,
+               "DimFK": 1,
+               "Id": 1110,
+               "Name": "日期",
+               "Type": 0,
+               "Child": [
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 11110,
+                     "Name": "酒店订单创建日期",
+                     "Type": 1,
+                     "Child": [
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 81,
+                           "Name": "酒店订单创建年",
+                           "Type": 1,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 82,
+                           "Name": "酒店订单创建月",
+                           "Type": 2,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 83,
+                           "Name": "酒店订单创建日",
+                           "Type": 3,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 84,
+                           "Name": "酒店订单创建时",
+                           "Type": 4,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 85,
+                           "Name": "酒店订单创建分",
+                           "Type": 5,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 86,
+                           "Name": "酒店订单创建秒",
+                           "Type": 6,
+                           "Child": null
+                        }
+                     ]
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 11120,
+                     "Name": "酒店订单入住日期",
+                     "Type": 1,
+                     "Child": [
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 87,
+                           "Name": "酒店订单入住年",
+                           "Type": 1,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 88,
+                           "Name": "酒店订单入住月",
+                           "Type": 2,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 89,
+                           "Name": "酒店订单入住日",
+                           "Type": 3,
+                           "Child": null
+                        }
+                     ]
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 11130,
+                     "Name": "酒店订单离店日期",
+                     "Type": 1,
+                     "Child": [
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 90,
+                           "Name": "酒店订单离店年",
+                           "Type": 1,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 91,
+                           "Name": "酒店订单离店月",
+                           "Type": 2,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 92,
+                           "Name": "酒店订单离店日",
+                           "Type": 3,
+                           "Child": null
+                        }
+                     ]
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 11140,
+                     "Name": "酒店订单核单日期",
+                     "Type": 1,
+                     "Child": [
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 93,
+                           "Name": "酒店订单核单年",
+                           "Type": 1,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 94,
+                           "Name": "酒店订单核单月",
+                           "Type": 2,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 95,
+                           "Name": "酒店订单核单日",
+                           "Type": 3,
+                           "Child": null
+                        }
+                     ]
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 11150,
+                     "Name": "酒店订单点评日期",
+                     "Type": 1,
+                     "Child": [
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 96,
+                           "Name": "酒店订单点评年",
+                           "Type": 1,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 97,
+                           "Name": "酒店订单点评月",
+                           "Type": 2,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 98,
+                           "Name": "酒店订单点评日",
+                           "Type": 3,
+                           "Child": null
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "ProductId": 1,
+               "DimFK": 1,
+               "Id": 1120,
+               "Name": "地域",
+               "Type": 0,
+               "Child": [
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 11210,
+                     "Name": "酒店下单地区",
+                     "Type": 1,
+                     "Child": [
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 21,
+                           "Name": "酒店下单地区(省)",
+                           "Type": 7,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 22,
+                           "Name": "酒店下单地区(市)",
+                           "Type": 8,
+                           "Child": null
+                        }
+                     ]
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 11220,
+                     "Name": "酒店归属地",
+                     "Type": 1,
+                     "Child": [
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 23,
+                           "Name": "酒店归属地(省)",
+                           "Type": 7,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 24,
+                           "Name": "酒店归属地(市)",
+                           "Type": 8,
+                           "Child": null
+                        },
+                        {
+                           "ProductId": 1,
+                           "DimFK": 1,
+                           "Id": 25,
+                           "Name": "酒店资源商业区",
+                           "Type": 8,
+                           "Child": null
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "ProductId": 1,
+               "DimFK": 1,
+               "Id": 1130,
+               "Name": "其他",
+               "Type": 1,
+               "Child": [
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 1,
+                     "Name": "酒店订单号",
+                     "Type": 12,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 31,
+                     "Name": "酒店名称",
+                     "Type": 9,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 40,
+                     "Name": "酒店订单状态",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 41,
+                     "Name": "酒店订单类型",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 42,
+                     "Name": "酒店订单来源渠道",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 43,
+                     "Name": "酒店代理商",
+                     "Type": 8,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 44,
+                     "Name": "酒店订单来源平台",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 45,
+                     "Name": "酒店付款方式",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 46,
+                     "Name": "酒店推荐等级",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 47,
+                     "Name": "酒店星级",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 48,
+                     "Name": "酒店品牌",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 61,
+                     "Name": "酒店级别",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 71,
+                     "Name": "酒店订单是否担保",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 72,
+                     "Name": "是否团购酒店",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 74,
+                     "Name": "酒店订单是否异地购买",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 75,
+                     "Name": "酒店订单是否点评",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 76,
+                     "Name": "酒店订单确认类型",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 77,
+                     "Name": "是否为预留房酒店订单",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 78,
+                     "Name": "酒店订单是否为末单",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 79,
+                     "Name": "是否当天下单当天入住酒店",
+                     "Type": 7,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 1,
+                     "Id": 80,
+                     "Name": "酒店订单是否提现",
+                     "Type": 7,
+                     "Child": null
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "ProductId": 1,
+         "DimFK": 2,
+         "Id": 120,
+         "Name": "指标",
+         "Type": 0,
+         "Child": [
+            {
+               "ProductId": 1,
+               "DimFK": 2,
+               "Id": 1210,
+               "Name": "订单数指标",
+               "Type": 1,
+               "Child": [
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 1,
+                     "Name": "酒店订单总数",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 2,
+                     "Name": "酒店成功订单数",
+                     "Type": 10,
+                     "Child": null
+                  }
+               ]
+            },
+            {
+               "ProductId": 1,
+               "DimFK": 2,
+               "Id": 1220,
+               "Name": "求和指标",
+               "Type": 1,
+               "Child": [
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 3,
+                     "Name": "酒店订单消费总金额",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 6,
+                     "Name": "酒店成功订单消费总金额",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 9,
+                     "Name": "酒店订单总营收",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 12,
+                     "Name": "酒店成功订单总营收",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 15,
+                     "Name": "酒店订单总间夜数",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 18,
+                     "Name": "酒店成功单总间夜数",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 21,
+                     "Name": "酒店订单预留房总数量",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 24,
+                     "Name": "酒店成功单预留房总数量",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 27,
+                     "Name": "酒店订单可使用现金券总金额",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 30,
+                     "Name": "酒店订单实际使用现金券总金额",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 33,
+                     "Name": "酒店订单点评总奖金",
+                     "Type": 10,
+                     "Child": null
+                  }
+               ]
+            },
+            {
+               "ProductId": 1,
+               "DimFK": 2,
+               "Id": 1230,
+               "Name": "最大指标",
+               "Type": 1,
+               "Child": [
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 4,
+                     "Name": "酒店最大订单消费金额",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 7,
+                     "Name": "酒店最大成功订单消费金额",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 10,
+                     "Name": "酒店最大订单营收",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 13,
+                     "Name": "酒店最大成功订单营收",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 16,
+                     "Name": "酒店最大订单间夜数",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 19,
+                     "Name": "酒店最大成功单间夜数",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 22,
+                     "Name": "酒店最大订单预留房数量",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 25,
+                     "Name": "酒店最大成功单预留房数量",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 28,
+                     "Name": "酒店订单最大可使用现金券金额",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 31,
+                     "Name": "酒店订单最大实际使用现金券金额",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 34,
+                     "Name": "酒店订单最大点评奖金",
+                     "Type": 10,
+                     "Child": null
+                  }
+               ]
+            },
+            {
+               "ProductId": 1,
+               "DimFK": 2,
+               "Id": 1240,
+               "Name": "最小指标",
+               "Type": 1,
+               "Child": [
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 5,
+                     "Name": "酒店最小订单消费金额",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 8,
+                     "Name": "酒店最小成功订单消费金额",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 11,
+                     "Name": "酒店最小订单营收",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 14,
+                     "Name": "酒店最小成功订单营收",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 17,
+                     "Name": "酒店最小订单间夜数",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 20,
+                     "Name": "酒店最小成功单间夜数",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 23,
+                     "Name": "酒店最小订单预留房数量",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 26,
+                     "Name": "酒店最小成功单预留房数量",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 29,
+                     "Name": "酒店订单最小可使用现金券金额",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 32,
+                     "Name": "酒店订单最小实际使用现金券金额",
+                     "Type": 10,
+                     "Child": null
+                  },
+                  {
+                     "ProductId": 1,
+                     "DimFK": 2,
+                     "Id": 35,
+                     "Name": "酒店订单最小点评奖金",
+                     "Type": 10,
+                     "Child": null
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+]
