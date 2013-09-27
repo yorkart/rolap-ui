@@ -1,46 +1,17 @@
-
-        
+		<div class="sidebar-nav" ng-controller="MetadataCtrl">
+			<!-- <div ng-include src="'partials/left_sidebar.html'"></div>-->
+			       
 			<h3>产品</h3>
-			<div style="margin:10px;" ng-controller="ProductCtrl">
+			<div style="margin:10px 10px 0px 10px;">
 				<select ng-model="product" ng-options="p.nodename for p in products" ng-change="change()"></select>
 			</div>
 			
 			<h3>维度</h3>
-			<ul id="tree_dimension" class="filetree tree_4_bst">
-				<li><span class="folder">Dimension01</span>
-					<ul>
-						<li><span class="file dimension" id="1">Dimension Year</span></li>
-						<li><span class="file dimension" id="2">Dimension Quarter</span></li>
-						<li><span class="file dimension" id="3">Dimension Month</span></li>
-						<li><span class="file dimension" id="4">Dimension Day</span></li>
-					</ul>
-				</li>
-				<li class="closed"><span class="folder">Dimension02</span>
-					<ul>
-						<li><span class="file dimension" id="5">Dimension 3.1</span></li>
-						<li><span class="file dimension" id="6">Dimension 3.2</span></li>
-						<li><span class="file dimension" id="7">Dimension 3.3</span></li>
-						<li><span class="file dimension" id="8">Dimension 3.4</span></li>
-					</ul>
-				</li>
+			<ul id="tree_dimension" class="filetree tree_4_bst" >
 			</ul>
 			
 			<h3>度量</h3>
-			<ul id="tree_measure" class="filetree tree_4_bst">
-				<li><span class="folder">Measure01</span>
-					<ul>
-						<li><span class="file measure" id="11">Measure 1.1</span></li>
-						<li><span class="file measure" id="12">Measure 1.2</span></li>
-						<li><span class="file measure" id="13">Measure 1.3</span></li>
-					</ul>
-				</li>
-				<li class="closed"><span class="folder">Measure02</span>
-					<ul>
-						<li><span class="file measure" id="14">Measure 3.1</span></li>
-						<li><span class="file measure" id="15">Measure 3.2</span></li>
-						<li><span class="file measure" id="16">Measure 3.3</span></li>
-						<li><span class="file measure" id="17">Measure 3.4</span></li>
-					</ul>
-				</li>
+			<ul id="tree_measure" class="filetree tree_4_bst" >
 			</ul>
-		
+				
+		</div>
