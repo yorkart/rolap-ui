@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="zippyModule">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Rolap</title>
+	<style >
+	.zippy {
+  border: 1px solid black;
+  display: inline-block;
+  width: 250px;
+}
+.zippy.opened > .title:before { content: '▼ '; }
+.zippy.opened > .body { display: block; }
+.zippy.closed > .title:before { content: '► '; }
+.zippy.closed > .body { display: none; }
+.zippy > .title {
+  background-color: black;
+  color: white;
+  padding: .1em .3em;
+  cursor: pointer;
+}
+.zippy > .body {
+  padding: .1em .3em;
+}
+	</style>
+  </head>
+  <body >
+  
+	<div ng-controller="Ctrl3">
+      Title: <input ng-model="title"> <br>
+      Text: <textarea ng-model="text"></textarea>
+      <hr>
+      <div class="zippy" zippy-title="Details: {{title}}...">{{text}}</div>
+    </div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+	<script src="lib/jquery/jquery-1.10.2.min.js"></script>
+	
+	<script type="text/javascript" src="lib/angular-1.2.0-rc.2/angular.min.js" ></script>
+	
+	<script type="text/javascript">
+	function Ctrl3($scope) {
+		$scope.title = 'Lorem Ipsum';
+		$scope.text = 'Neque porro quisquam est qui dolorem ipsum quia dolor...';
+	}
+	angular.module('zippyModule', []).directive('zippy', function(){
+		return {
+			restrict: 'C',
+			// This HTML will replace the zippy directive.
+			replace: true,
+			transclude: true,
+			scope: { title:'@zippyTitle' },
+			template: '<div>' +
+					'<div class="title">{{title}}</div>' +
+					'<div class="body" ng-transclude></div>' +
+					'</div>',
+			// The linking function will add behavior to the template
+			link: function(scope, element, attrs) {
+				// Title element
+				var title = angular.element(element.children()[0]),
+				// Opened / closed state
+				opened = true;
+		
+				// Clicking on title should open/close the zippy
+				title.on('click', toggle);
+		
+				// Toggle the closed/opened state
+				function toggle() {
+					opened = !opened;
+					element.removeClass(opened ? 'closed' : 'opened');
+					element.addClass(opened ? 'opened' : 'closed');
+				}
+			
+				// initialize the zippy
+				toggle();
+				
+				scope.$watch(attrs.zippyModule, function(value) {
+					$(element).find('.title').text('123');
+				});
+			}
+		}
+	});
+  
+	/*
+        $(function(){
+			// first example
+			$("#tree_dimension").treeview();
+			$("#tree_measure").treeview();
+			//drag_block.init_drag('dimension');
+			//drag_block.init_drag('measure');
+			
+			drag_block.init();
+			drag_block.setFilterEvent(function(e,source){
+				console.log('setFilterEvent');
+				$('#myModalLabel').text( $(source).text());
+				//$('#myModal').modal('toggle');
+				$('#dimensionModal').modal('toggle');
+				
+			});
+        });
+		*/
+    </script>
+	
+  </body>
+</html>
